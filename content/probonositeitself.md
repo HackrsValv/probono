@@ -39,7 +39,7 @@ Steps:
 
 Next:
 
-Now go to explore more what can Pelican do for you. Any time you want to change anything/add new pages - you will have only edit/add, commit and push to the GitHub repo - Cloudflare will pickup changes automatically and will deploy the site in a couple of minutes!
+Now go to explore more what can Pelican do for you. Any time you want to change anything/add new pages - you will have only edit/add, commit and push to the GitHub repo - Cloudflare will pickup changes automatically and will deploy the site!
 
 
 
