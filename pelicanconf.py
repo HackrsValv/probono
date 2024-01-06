@@ -1,5 +1,5 @@
 AUTHOR = 'Martynas'
-SITENAME = 'Pro Bono Sysadmin/DevOps/SRE services'
+SITENAME = 'Pro Bono Admin'
 SITEURL = ""
 
 PATH = "content"
