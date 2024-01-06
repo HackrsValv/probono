@@ -11,7 +11,7 @@ There are many services in the Internet, that are giving some starting packages 
 
 To generate the site I am using:
 
-- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one, shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I have chosen Pelican because I know a bit of Python and also it looked like it did not require lots of work to use. If you need very powerful one - check Hugo.
+- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one, shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I have chosen Pelican because I know a bit of Python and also it looked like it did not require lots of work to use. Also - it is very difficult to hack the sttically generated site that is deployed in this way. If you need more powerful one generator - check [Hugo](https://gohugo.io).
 
 The costs are: 
     
@@ -21,7 +21,27 @@ The costs are:
 
 How does it work? 
 
-I will describe a flow I am using as for details on how to specifically use GitHub or Cloudflare - you can find it on the internet,
+I will describe a flow I am using as for details on how to specifically use GitHub or Cloudflare - you can find it on the internet, but if you fail - come and we will see what can be done.
+
+Steps:
+
+1. Buy a domain (around 10 bucks)
+1. Get Cloudflare subscription (free)
+1. Get GitHub subscription (free)
+1. Go to Pelican site and follow QuickStart
+1. Go to GitHub and create a new GitHub repo
+1. Create requirements.txt - this will instruct Cloudflare build machine to install required packages. More information is [here](https://developers.cloudflare.com/pages/framework-guides/deploy-a-pelican-site/). I only had to use `pip3 list --format=freeze > requirements.txt` command as Cloudflare way produces some weird paths. I have found the workaround on [stackoverflow](https://stackoverflow.com/questions/62885911/pip-freeze-creates-some-weird-path-instead-of-the-package-version).
+1. Use GitHub help to push directory from your computer to the GitHub repo (don't forget `git init`). Also I suggest to use [.gitignore for Python](https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore) - save it as .gitignore in Pelican project directory).
+1. Go over to Cloudflare and get to *Workers & Pages* screen. Create and and you will have to connect GitHub to Cloudflare. Select framework Pelican, add `PYTHON_VERSION 3.11` to the environment variables, everything else can be left as default. (This Python version worked for me, the version suggested in Cloudflare docs - did not).
+1. There should be many log lines in the build, but we are only interested in `Success: Your site was deployed!`
+1. Alright! Now we check if it is working: in the deployment details you can find a link to the website. If that works as expected - then let's connected the domain name to the page.
+1. Just add custom domain and Cloudflare will do everything automatically. In my case I have added probono.hackrsvalv.com and in a couple of minutes it has started to work.
+
+Next:
+
+Now go to explore more what can Pelican do for you. Any time you want to change anything/add new pages - you will have only edit/add, commit and push to the GitHub repo - Cloudflare will pickup changes automatically and will deploy the site in a couple of minutes!
+
+
 
 
 
