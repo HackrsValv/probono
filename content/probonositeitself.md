@@ -2,20 +2,22 @@ Title: Pro Bono Page hosting explained
 Date: 2024-01-06 10:03
 Category: (Almost) free website hosting
 
-Hi! So let's start from the Pro Bono Page hosting itself. It's hosting is almost free and you can do it for less.
+Hi! So let's start from the Pro Bono Page hosting itself. Its hosting is almost free and you can do it even for less amount of money then I spent.
 
 There are many services in the Internet, that are giving some starting packages that are either very cheap or free and here I am using two of them: 
 
 - [Cloudflare](https://www.cloudflare.com/)
 - [GitHub](https://github.com/)
 
-To generate the site I am using:
+To generate the site I chose:
 
-- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one, shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I have chosen Pelican because I know a bit of Python and also it looked like it did not require lots of work to use. Also - it is very difficult to hack the sttically generated site that is deployed in this way. If you need more powerful one generator - check [Hugo](https://gohugo.io).
+- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I am using Pelican for this page because I know a bit of Python and also it looked like it did not require lots of work to use. Also - it is very difficult to hack the sttically generated site that is deployed in this way, especially if it is hosted in Cloudflare or any other CDN that take cares (sombutnotol) security aspects. 
+
+If you need more powerful one generator - check [Hugo](https://gohugo.io).
 
 The costs are: 
     
-- Domain name (in my case - this is a subdomain, probono that is part of hackrsvalv.com - so I don't pay extra for that). Usually I buy domain names via GKG.NET, but recently started to use Cloudflare for convenience. It is not the wises solution though as I am putting all eggs in one basket (i.e. if Cloudflare would boot me out or would be having issues - managing of the domain might be problematic), but I accept the risks.
+- Domain name (in my case - this is a subdomain, probono that is part of hackrsvalv.com - so I don't pay extra for that). Usually I buy domain names via GKG.NET, but recently started to use Cloudflare for convenience. It is not the wisest solution though as I am putting all eggs in one basket (i.e. if Cloudflare would boot me out or would be having issues - managing of the domain might be problematic), but I accept the risks.
 
 - I pay for GitHub subscription, but you do not have to. The setup does not require paid GitHub service. Also you can use any Git provider you want or do not use it at all and keep everything on your computer (make sure you have good backups).
 
@@ -40,6 +42,8 @@ Steps:
 Next:
 
 Now go to explore more what can Pelican do for you. Any time you want to change anything/add new pages - you will have only edit/add, commit and push to the GitHub repo - Cloudflare will pickup changes automatically and will deploy the site!
+
+In the next blog post I will show you on how to have comment functionality for free on the static site.
 
 
 
