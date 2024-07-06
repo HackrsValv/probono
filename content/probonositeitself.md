@@ -1,5 +1,5 @@
 Title: Pro Bono Page hosting explained
-Date: 2024-01-06 10:03
+Date: 2024-06-06 20:36
 Category: (Almost) free website hosting
 
 [TOC]
@@ -15,7 +15,7 @@ There are many services in the Internet, that are giving some starting packages 
 
 ## To generate the site
 
-- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I am using Pelican for this page because I know a bit of Python and also it looked like it did not require lots of work to use. Also - it is very difficult to hack the sttically generated site that is deployed in this way, especially if it is hosted in Cloudflare or any other CDN that take cares (sombutnotol) security aspects. 
+- [Pelican](https://getpelican.com) - a static web site generator. Basically you create pages in MarkDown and it generates static HTML files - so any hosting, even the cheapest one shared hosting can host the site and it is very fast, small, easy to backup/restore/move. Static site generators are great! There are many of them - I am using Pelican for this page because I know a bit of Python and also it looked like it did not require lots of work to use. Also - it is very difficult to hack the statically generated site that is deployed in this way, especially if it is hosted in Cloudflare or any other CDN that take cares (sombutnotol) security aspects. 
 
 If you need more powerful one generator - check [Hugo](https://gohugo.io).
 
